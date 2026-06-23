@@ -73,6 +73,63 @@
           </div>
         </section>
 
+        <section class="section data-siswa-section" id="data-siswa">
+          <div class="container">
+            <div class="section-head">
+              <h2>Data Siswa</h2>
+              <p>Kelola data siswa — tambah, edit, hapus, import/export, cetak.</p>
+            </div>
+
+            <div class="data-siswa-actions">
+              <button id="btnAddStudent" class="button primary">Tambah Siswa</button>
+              <input type="file" id="fileImport" accept=".xlsx,.xls,.csv" style="display:none" />
+              <button id="btnImport" class="button">Import Excel</button>
+              <button id="btnExportExcel" class="button">Export Excel</button>
+              <button id="btnExportPDF" class="button">Export PDF</button>
+              <button id="btnPrint" class="button">Cetak Data</button>
+            </div>
+
+            <div class="table-wrap">
+              <table class="students-table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIS</th>
+                    <th>Kelas</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="studentsTbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Modal Tambah / Edit -->
+          <div class="modal" id="studentModal" aria-hidden="true">
+            <div class="modal-content">
+              <h3 id="modalTitle">Tambah Siswa</h3>
+              <form id="studentForm">
+                <input type="hidden" id="studentId" />
+                <label>Nama
+                  <input id="studentName" type="text" required />
+                </label>
+                <label>NIS
+                  <input id="studentNis" type="text" required />
+                </label>
+                <label>Kelas
+                  <input id="studentKelas" type="text" required />
+                </label>
+
+                <div class="modal-actions">
+                  <button type="submit" class="button primary">Simpan</button>
+                  <button type="button" id="btnCancel" class="button">Batal</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
         <section class="section intro" id="about">
           <div class="container">
             <h2>Tentang SMK Kreatif</h2>
@@ -192,5 +249,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </body>
 </html>

@@ -422,3 +422,79 @@ a {
     height: auto;
   }
 }
+
+/* Data Siswa styles */
+.data-siswa-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.table-wrap {
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.students-table th {
+  background: rgba(13,71,161,0.03);
+}
+
+.students-table td .btn-action {
+  margin-right: 0.5rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.4);
+  z-index: 60;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  width: min(640px, calc(100% - 2rem));
+}
+
+.modal-content form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
