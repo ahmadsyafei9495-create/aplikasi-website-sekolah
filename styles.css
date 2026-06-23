@@ -298,6 +298,69 @@ a {
   color: #fff;
 }
 
+/* Sidebar layout */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1rem 0.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+.brand-sidebar {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.sidebar-toggle {
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 2rem 0;
+}
+
+.sidebar-menu li {
+  margin: 0.25rem 0;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 0.65rem 1rem;
+  border-radius: 0.75rem;
+  color: var(--text);
+}
+
+.sidebar-menu a:hover {
+  background: rgba(13,71,161,0.06);
+  color: var(--primary);
+}
+
+.content {
+  display: block;
+}
+
 .footer-inner {
   display: flex;
   align-items: center;
@@ -348,5 +411,14 @@ a {
   .footer-inner {
     flex-direction: column;
     text-align: center;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
   }
 }
